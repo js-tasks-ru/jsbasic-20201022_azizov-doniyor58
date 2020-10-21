@@ -4,5 +4,9 @@
  * @returns {boolean}
  */
 function checkSpam(str) {
-  // ваш код...
+  return Boolean(
+    ['1xBet', 'XXX']
+      .map((spam) => spam.toLowerCase())
+      .filter((spam) => str.toLowerCase().includes(spam))
+      .length)
 }
