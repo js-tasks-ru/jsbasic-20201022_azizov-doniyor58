@@ -4,5 +4,17 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-  // ваш код...
+  const arrayOfNumbers = str
+    .replace(/,/gm, ' ')
+    .replace(/[а-яА-ЯёЁa-zA-Z|+]/gm, '')
+    .split(' ')
+    .filter((el) => Boolean(el))
+    .map((str) => Number(str))
+
+
+  return {
+    min: Math.min(...arrayOfNumbers),
+    max: Math.max(...arrayOfNumbers)
+
+  }
 }
