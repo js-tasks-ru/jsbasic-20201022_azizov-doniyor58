@@ -4,5 +4,7 @@
  * @returns {Number}
  */
 function sumSalary(salaries) {
-  // ваш код...
+  return Object
+    .values(salaries)
+    .reduce((acc, current) => Number(current) ? acc + current : acc, 0)
 }
