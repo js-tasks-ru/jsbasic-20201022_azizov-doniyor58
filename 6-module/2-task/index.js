@@ -1,5 +1,4 @@
 import createElement from '../../assets/lib/create-element.js';
-import { getPrice } from './utils/index.js'
 
 export default class ProductCard {
   constructor(product) {
@@ -20,7 +19,7 @@ export default class ProductCard {
           class="card__image"
           alt="product"
         />
-        <span class="card__price">€${getPrice(price)}</span>
+        <span class="card__price">€${price.toFixed(2)}</span>
       </div>
       <div class="card__body">
         <div class="card__title">${name}</div>

@@ -1,5 +1,4 @@
 import createElement from '../../assets/lib/create-element.js'
-import { getPrice } from './utils/index.js'
 
 
 export default class Carousel {
